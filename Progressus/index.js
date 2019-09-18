@@ -104,15 +104,16 @@ $username.delegate('.canceluser','click',function(){
 $username.delegate('.saveuser','click',function(){
     var $li =$(this).closest('li')
     var user ={
-     firstname:   $li.find('input.first_name').val(),
-     secondname: $li.find('input.second_name').val(),
+     firstname:   $li.find('input.firstname').val(),
+     secondname: $li.find('input.secondname').val(),
 expertise: $li.find('input.expertise').val(),
 password:$li.find('input.password').val()
 
 
          
     };
-    console.log( "http://localhost:3000/users/"+ $li.attr('data-id'))
+    console.log( $li.find('span.firstname').html(user.firstname))
+    
 $.ajax({
     type:"PUT",
     url:'http://localhost:3000/users/'+ $li .attr('data-id'),// here we access the stored refence of the id
@@ -127,6 +128,7 @@ $.ajax({
      error: function(){
          alert("error updating users")
      }
+   
 })
 })
 })

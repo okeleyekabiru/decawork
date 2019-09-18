@@ -1,3 +1,11 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstname": "okeleey",
+      "secondname": "toby",
+      "expertise": "developers",
+      "password": "abiola",
+      "id": 1
+    }
+  ]
 }
