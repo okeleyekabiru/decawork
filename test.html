@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            ul li .edit{
+              display:none;  
+            }
+            ul li.edit .edit{
+                display:initial;
+            }
+            ul li.edit .noedit{
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="usersname"></ul>
+<input type="text" size="30" placeholder="username" id="input"><br>
+<input type="text" size="30" placeholder="firstname" id="name"><br>
+<!--<input type="text" size="30" placeholder="secondname" id="second"><br>-->
+<input type="file" placeholder="image" id="file"><br>
+<input type="text" size="30" placeholder="expertise" id="expertise"><br>
+<button type="button" id="click">click</button>
+<button type="button" data-id="{{id}}">delete</button>
+<template id="user-template">
+        <li data-id="{{id}}"><!--we store the id of eaxh element for puit value-->
+                <p>name:<span class="noedit name">{{name}}</span></p>
+                <input class="edit name">
+                <p><span class="noedit expertise">expertise:{{expertise}}</span></p>
+                <input class="edit expertise">
+                <p>image:<img src = {{image}}></p><!--here is tthe structure of waht we wanna submit-->
+          
+                <button data-id='{{id}}' class='remove' >X</button>
+                <button class="noedit edituser">edit</button> 
+                <button class="canceluser edit">cancel</button>
+            <button class="edit saveuser">save</button> 
+            </li>
+</template> 
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+            crossorigin="anonymous"></script>
+            <script src="main.js"></script>
+            <script src="https://cdn.rawgit.com/janl/mustache.js/master/mustache.min.js"></script>
+    </body>
+</html>

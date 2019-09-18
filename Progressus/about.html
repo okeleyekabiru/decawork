@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>About - Progressus Bootstrap template</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	    
+            ul li .edit{
+              display:none;  
+            }
+            ul li.edit .edit{
+                display:initial;
+            }
+            ul li.edit .noedit{
+                display:none;
+            }
+    
+	</style>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><img src="Free_Sample_By_Wix.jfif" alt="decwork"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="about.html">for freelancer</a></li>
+					<li><a href="sidebar-left.html">review</a></li>
+
+					<li><a href="contact.html">hire a developer</a></li>
+					<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+
+		<ol class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li class="active">for freelancer</li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">decwork</h1>
+				</header>
+				<main id="main"></main>
+				<ul id="username"></ul>
+
+
+				<template id="user-template">
+						<li data-id="{{id}}"><!--we store the id of eaxh element for puit value-->
+								<p>firstname:<span class="noedit firstname ">{{firstName}}</span></p>
+								<input class="edit firstname">
+								<p>secondname:<span class="noedit secondname ">{{secondName}}</span></p>
+								<input class="edit secondname">
+								<p>expertise:<span class="noedit expertise">{{expertise}}</span></p>
+								<input class="edit expertise">
+								<p>image:<img src = {{image}}></p><!--here is tthe structure of waht we wanna submit-->
+								<p>password:<span class="noedit password">{{password}}</span></p>
+								<input class="edit password">
+								<button data-id='{{id}}' class='remove' >X</button>
+								<button class="noedit edituser">edit</button> 
+								<button class="canceluser edit">cancel</button>
+							<button class="edit saveuser">save</button> 
+							</li>
+				</template> 
+			</article>
+			<!-- /Article -->
+			
+			<!-- Sidebar -->
+			<aside class="col-sm-4 sidebar sidebar-right">
+
+				<div class="widget">
+					<h4>information and adverts</h4>
+					<ul class="list-unstyled list-spaces">
+						<li><a href="">to improve your skills click here</a><br><span class="small text-muted">we are in the world of growing technologies if you want to be up to date of the changes click the link</span></li>
+						<li><a href="">become a first hand freelancer</a><br><span class="small text-muted">with devwork you can earn more than what is expected</span></li>
+						<li><a href="">to grow with digital evolution</a><br><span class="small text-muted">technology is advancing to next generation to keep up click the link</span></li>
+						<li><a href="">best of decwork</a><br><span class="small text-muted">click to survey the delivery of services rendered on decwork</span></li>
+						<li><a href="">view our partners at various location</a><br><span class="small text-muted">click to see our partners accross the world</span></li>
+					</ul>
+				</div>
+
+			</aside>
+			<!-- /Sidebar -->
+
+		</div>
+	</div>	<!-- /container -->
+	
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Contact</h3>
+						<div class="widget-body">
+							<p>+234 81 26 13 6616<br>
+								<a href="mailto:#">kabiruokleye@gmail.com</a><br>
+								<br>
+								13 ayantuga street mushin lagos lg 37015
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-3 widget">
+						<h3 class="widget-title">Follow me</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons clearfix">
+								<a href=""><i class="fa fa-twitter fa-2"></i></a>
+								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
+								<a href=""><i class="fa fa-github fa-2"></i></a>
+								<a href=""><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">our mission</h3>
+						<div class="widget-body">
+								<p>decwork as been number one freelancing  site you earn from u home at ypour own pace</p>
+								<p>our mission is to render essential service to our customers and ensure they enjoy the very best from our expect </p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="#">Home</a> | 
+								<a href="about.html">About</a> |
+								<a href="sidebar-right.html">Sidebar</a> |
+								<a href="contact.html">Contact</a> |
+								<b><a href="signup.html">Sign up</a></b>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2019,okeleye kabiru  <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
+							</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>	
+		
+
+
+
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+	<script src="https://cdn.rawgit.com/janl/mustache.js/master/mustache.min.js"></script>
+
+</body>
+</html>
