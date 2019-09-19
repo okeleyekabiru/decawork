@@ -24,6 +24,14 @@
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 	<style>
+		.remove{
+			
+			padding: 5px 20px;
+    background: red;
+		border: 0;
+		border-radius: 4px;
+    text-transform: capitalize;
+		}
 	    
             ul li .edit{
               display:none;  
@@ -33,7 +41,32 @@
             }
             ul li.edit .noedit{
                 display:none;
-            }
+						}
+						.edituser{
+							
+    padding: 5px 20px;
+    background: yellow;
+    border: 0;
+		text-transform: capitalize;
+		border-radius: 4px;
+
+						}
+						.canceluser{
+						
+							padding: 5px 20px;
+    background: blue;
+    border: 0;
+		text-transform: capitalize;
+		border-radius: 4px;
+
+						}
+						.saveuser{
+							padding: 5px 20px;
+    background:green;
+    border: 0;
+		text-transform: capitalize;
+		border-radius: 4px;
+						}
     
 	</style>
 </head>
@@ -83,21 +116,28 @@
 
 
 				<template id="user-template">
-						<li data-id="{{id}}"><!--we store the id of eaxh element for puit value-->
-								<p>firstname:<span class="noedit firstname ">{{firstname}}</span></p>
+						<li data-id="{{id}}"  class="user_template"> 
+							<!--we store the id of eaxh element for puit value-->
+							<div class="card">
+									<div class="card-body">
+							<p><img src = "assets/images/photographers-1150033_1920.jpg"></p><!--here is tthe structure of waht we wanna submit-->
+
+								<p><span class="noedit firstname ">{{firstname}}</span>	&nbsp;<span class="noedit secondname ">{{secondname}}
+									</p>
 								<input class="edit firstname">
-								<p>secondname:<span class="noedit secondname ">{{secondname}}</span></p>
 								<input class="edit secondname">
 								<p>expertise:<span class="noedit expertise">{{expertise}}</span></p>
 								<input class="edit expertise">
-								<p>image:<img src = {{image}}></p><!--here is tthe structure of waht we wanna submit-->
 								<p>password:<span class="noedit password">{{password}}</span></p>
 								<input class="edit password">
 								<button data-id='{{id}}' class='remove' >X</button>
 								<button class="noedit edituser">edit</button> 
 								<button class="canceluser edit">cancel</button>
 							<button class="edit saveuser">save</button> 
+							</div>
+							</div>
 							</li>
+							
 				</template> 
 			</article>
 			<!-- /Article -->

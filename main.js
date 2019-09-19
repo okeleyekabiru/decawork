@@ -3,11 +3,8 @@ $(function (){
     var $firstname = $("#name")
     var $lastname = $("#second")
     var $expertise = $("#expertise")
-    var fd = new FormData();
-    var files = $('#file')[0].files[0];
-    fd.append('file',files);
+ 
 
-    var $image = $("fd")
     var usertemplate =$("#user-template").html()// template for the whole formart
     function addUser(user){
         $username.append(Mustache.render(usertemplate,user))//appand it to a resule
@@ -93,5 +90,25 @@ $.ajax({
          alert("error updating users")
      }
 })
+})
+
+ $username.delegate('.btn','click',function(){
+     
+    var $li =$(this).closest('li')
+    console.log( $li .attr('data-id'))
+    console.log("http://localhost:3000/users" + $li.attr('data-id'))
+     localStorage.setItem("users",$li.attr('data-id'))
+    window.location = "na.html" + '#' +$li .attr('data-id')
+/*$.ajax({
+    type:"GET",
+    url:'http://localhost:3000/users/'+ $li .attr('data-id'),// here we access the stored refence of the id
+     data:user,//the object we assigned 
+     success:function(newwuser){
+     addUser(user)
+     },
+     error: function(){
+         alert("errror view users")
+     }
+     })*/
 })
 });

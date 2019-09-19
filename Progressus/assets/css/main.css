@@ -1,7 +1,32 @@
 /* Header */
-#head { background:#181015 url( ../images/bg_header.jpg) no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
+.navbar-brand > img{
+	height: 69px;
+    margin-top: -2rem !important;
+}
+.user_template .card{
+	padding: 3rem;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	margin-bottom: 1.3rem;
+
+}
+.user_template .card h4{
+	font-size:20px;
+	text-transform: capitalize;
+}
+.user_template img{
+	height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+#head {background: linear-gradient(#0000006e,#00000085), url(../images/bg_header.jpg) no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
-	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:44px; margin-bottom:6px; color:white; line-height:1.15em; } 
+	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:44px; margin-bottom:6px; color:white !important; line-height:1.15em; } 
 	#head .tagline { color:rgba(255,255,255,0.75); margin-bottom:25px; }
 		#head .tagline a { color:#fff; } 
 	#head .btn { margin-bottom:10px;}
@@ -83,3 +108,5 @@ img.pull-left { margin-right: 10px; }
 		color:black;
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
+	#user-template{ border:1px solid black; border-radius:8px 	; -webkit-border-radius:8px 	; -moz-border-radius:8px 	; -ms-border-radius:8px 	; -o-border-radius:8px 	;
+}

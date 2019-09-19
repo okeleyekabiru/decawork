@@ -71,17 +71,21 @@
 			<!-- /Article -->
 			
 			<template id="user-template2">
-					<li data-id="{{id}}"><!--we store the id of eaxh element for puit value-->
-							<p>firstname:<span class="noedit name">{{firstName}}</span></p>
-						
-							<p>secondname:<span class="noedit name">{{secondName}}</span></p>
-							<p><span class="noedit expertise">expertise:{{expertise}}</span></p>
-							<p>image:<img src = {{image}}></p><!--here is tthe structure of waht we wanna submit-->
-							<button data-id='{{id}}' class='display' >view</button>
-					</button>
-				 
+					
+						<li data-id="{{id}}" class="user_template">
+							<div class="card">
+								<div class="card-body">
+									<img src="./assets/images/paul-frenzel-MnHQMzC6n-o-unsplash.jpg" />
+									<h4>{{firstname}} {{secondname}}</h4>
+									<p>Experties: <b>{{expertise}}</b></p>
+									<button data-id='{{id}}' class="btn btn-primary newbtn "  >View User</button>
+									<!-- <p>secondname:<span class="noedit name">{{secondName}}</span></p> -->
+									<!-- <p><span class="noedit expertise">expertise:{{expertise}}</span></p> -->
+								</div>
+							</div>
 						</li>
 			</template>
+			
 			<!-- Sidebar -->
 			<aside class="col-sm-3 sidebar sidebar-right">
 
@@ -186,6 +190,7 @@
 	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 	crossorigin="anonymous"></script>
 	<script src="index.js"></script>
+	<script src="index2.js"></script>
 	
 	<script src="https://cdn.rawgit.com/janl/mustache.js/master/mustache.min.js"></script>
 

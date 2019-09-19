@@ -101,7 +101,8 @@ $li.addClass('edit');
 $username.delegate('.canceluser','click',function(){
     $(this).closest('li').removeClass('edit')// we remove the class of edit
 });
-$username.delegate('.saveuser','click',function(){
+$username.delegate('.saveuser','click',function(e){
+e.preventDefault()
     var $li =$(this).closest('li')
     var user ={
      firstname:   $li.find('input.firstname').val(),
@@ -131,4 +132,11 @@ $.ajax({
    
 })
 })
+$userpage.delegate('.newbtn','click',function(){   
+    var $li =$(this).closest('li')
+     localStorage.setItem("users",$li.attr('data-id'))
+    window.location = "sidebar-right.html" + '#' +$li .attr('data-id')
+
+})
+
 })
