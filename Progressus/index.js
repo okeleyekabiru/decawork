@@ -17,7 +17,6 @@ $(function(){
         $userpage.append(Mustache.render(usertemplate2,user))//appand it to a resule
 
     }
-
     $.ajax({//here we use it to get
         type:"GET",
         url: "http://localhost:3000/users",
@@ -31,6 +30,7 @@ $(function(){
             
         }
     })
+
     $.ajax({//here we use it to get
         type:"GET",
         url: "http://localhost:3000/users",
@@ -43,13 +43,14 @@ $(function(){
             alert("error loading users")   
             
         }
+        
     })
     
   $('#submit').click(function(e){
     e.preventDefault()
      var users  = {
-         firstName:$firstName.val(),
-         secondName:$secondName.val(),
+         firstname:$firstName.val(),
+         secondname:$secondName.val(),
          email:$email.val(),
          password:$password.val(),
          re_password:$rpassword.val(),
@@ -58,12 +59,14 @@ $(function(){
      } 
      
      console.log(users)
+
+
      $.ajax({
          type:'POST',
          url:'http://localhost:3000/users',
          data:users,
          success:function(newuser){
-             alert("uploaded successfully" + newuser)
+             swal.fire('successfully uploaded')
          },
          error: function(){
              alert('error uploading')

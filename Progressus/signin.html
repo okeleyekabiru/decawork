@@ -79,13 +79,13 @@
 							<hr>
 							
 							<form>
-								<div class="top-margin">
+								<div class="top-margin" id="submitform">
 									<label>Username/Email <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" id="email1">
 								</div>
 								<div class="top-margin">
-									<label>Password <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
+									<label>Password <span class="text-danger" asp>*</span></label>
+									<input type="password" class="form-control" id="password12">
 								</div>
 
 								<hr>
@@ -186,10 +186,14 @@
 
 
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/template.js"></script>
+			<script src ="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	<script src="https://cdn.rawgit.com/janl/mustache.js/master/mustache.min.js"></script>
+
+	<script src="index.js"></script>
+	<script src="index2.js"></script>
+	<script src="index3.js"></script>
+
 </body>
 </html>
