@@ -1,21 +1,10 @@
 {
   "users": [
     {
-      "firstname": "okeleye",
-      "secondname": "kabiru",
-      "email": "kabiotobiano@gmail.com",
-      "password": "abiola",
-      "re_password": "i can build website for you from scratch with bootstrap",
-      "expertise": "developer",
-      "id": 2
-    },
-    {
-      "firstname": "seun",
-      "secondname": "abimbola",
-      "email": "kabiotobiano@gmail.com",
-      "password": "oluwatobi",
-      "re_password": "i can build a site from scrattch",
+      "firstname": "okerkejrj",
+      "secondname": "sjnmnsmanmasnm\t\t\t\t\t\t\t\t",
       "expertise": "build",
+      "password": "oluwatobi",
       "id": 3
     }
   ]

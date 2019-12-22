@@ -12,7 +12,15 @@ $(function(){
       
 $.ajax({
     type:'GET',
-    url:'http://localhost:3000/users'
+    url:'http://localhost:3000/users?email=password'+email&&password ,
+    data:details,
+    success:function(){
+        alert("logged in successfully")
+    },
+    error:function(){
+alert("errror loading user")
+    }
 })
     })
 })
+debugger;
